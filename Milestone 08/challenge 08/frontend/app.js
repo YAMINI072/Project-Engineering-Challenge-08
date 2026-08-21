@@ -1,4 +1,4 @@
-const API_BASE_URL = window.DIFFDRAFT_API_URL || 'http://localhost:3000';
+const API_BASE_URL = window.DIFFDRAFT_API_URL || 'https://4010-ix8bit4kztorujimi0qaf-78a8f760.sg1.manus.computer';
 const diffInput = document.querySelector('#diffInput');
 const charCount = document.querySelector('#charCount');
 const sampleButton = document.querySelector('#sampleButton');
