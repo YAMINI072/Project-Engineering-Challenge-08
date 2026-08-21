@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DiffDraft turns git diffs into clear, review-ready pull request descriptions." />
+    <title>DiffDraft — Ship clearer PRs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./"><span class="brand-mark">D</span><span>DiffDraft</span></a>
+        <span class="status-pill"><span class="status-dot"></span>Backend AI ready</span>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">A calmer handoff for your code</p>
+          <h1>Ship the change.<br /><em>Explain the change.</em></h1>
+          <p class="hero-copy">Paste a git diff and get a review-ready PR description that tells your team what changed, why it matters, and where to look first.</p>
+        </section>
+
+        <section class="workspace" aria-label="DiffDraft workspace">
+          <div class="input-card card">
+            <div class="card-heading"><div><span class="step-number">01</span><h2>Paste your diff</h2></div><span class="mono-label">git diff</span></div>
+            <textarea id="diffInput" spellcheck="false" placeholder="diff --git a/src/... b/src/...\n@@ -12,7 +12,9 @@\n+ describe the change here..."></textarea>
+            <div class="input-footer"><span id="charCount">0 / 120,000</span><button id="sampleButton" class="text-button" type="button">Use an example</button></div>
+            <button id="generateButton" class="primary-button" type="button"><span>Generate PR description</span><span class="button-arrow">↗</span></button>
+            <p id="errorMessage" class="error-message" role="alert"></p>
+          </div>
+
+          <div class="output-card card">
+            <div class="card-heading"><div><span class="step-number">02</span><h2>Your draft</h2></div><button id="copyButton" class="copy-button" type="button" disabled>Copy markdown</button></div>
+            <div id="output" class="output empty-state"><div class="empty-icon">✦</div><p>Your PR description will appear here.</p><span>One focused diff in. One clearer review out.</span></div>
+          </div>
+        </section>
+
+        <section class="trust-row"><div><strong>Private by default</strong><span>Your diff is sent only to the backend for this request.</span></div><div><strong>Review-ready structure</strong><span>Summary, rationale, review notes, and testing.</span></div><div><strong>Backend AI</strong><span>Your API key never touches this page.</span></div></section>
+      </main>
+
+      <footer><span>DiffDraft / Challenge 8</span><span>Built for the moments after “it works.”</span></footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
