@@ -38,10 +38,10 @@ The assignment's reference rates are used for a transparent estimate.
 
 ## Live Deployment
 
-**Frontend:** To be added after deployment.  
-**Backend:** To be added after deployment.  
+**Frontend:** [Live DiffDraft frontend](https://4173-ix8bit4kztorujimi0qaf-78a8f760.sg1.manus.computer/)  
+**Backend:** [Live backend health check](https://4010-ix8bit4kztorujimi0qaf-78a8f760.sg1.manus.computer/health)  
 
-The backend health check is available at `/health` and returns a JSON status object. For a static frontend deployment, set `window.DIFFDRAFT_API_URL` before the app script loads or replace the default API base URL in `frontend/app.js` with the deployed backend URL. Never commit `.env`; deploy `OPENROUTER_API_KEY` as a server-side environment variable.
+The walkthrough URLs above are public temporary hosting URLs for this submission. The backend is running with explicit `DEMO_MODE=true` so the evaluator can exercise the complete UI flow without a provider credential; production mode uses OpenRouter via the server-side `OPENROUTER_API_KEY`. The backend health check is available at `/health` and returns a JSON status object. Never commit `.env`; deploy `OPENROUTER_API_KEY` as a server-side environment variable.
 
 ## Local Development
 
@@ -63,6 +63,10 @@ npx serve .
 ```
 
 Then open the local frontend URL, choose **Use an example**, and click **Generate PR description**. Empty input, oversized input, backend errors, and loading states are handled in the UI.
+
+## Video Walkthrough
+
+[View the three-minute walkthrough on Google Drive](https://drive.google.com/file/d/19-pSwV6NSO6UNAtpjEwPanMGpva2cFPP/view?usp=sharing). The video covers the live demo, the backend validation function and its engineering rationale, and the frontend-to-backend request block.
 
 ## Ownership Notes
 
